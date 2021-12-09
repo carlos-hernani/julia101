@@ -1,0 +1,6 @@
+[deps]
+DiffEqOperators = "9fdde737-9c7f-55bf-ade8-46b3f136cc48"
+DomainSets = "5b8099bc-c8ec-5219-889f-1d9e522a28bf"
+ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
