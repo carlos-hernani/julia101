@@ -10,7 +10,7 @@ Dx = Differential(x)
 Dxx = Differential(x)^2
 
 # PDE
-eq  = Dt(u(t,x)) + u(t,x)*Dx(u(t,x)) - (0.01/pi)*Dxx(u(t,x)) ~ 0
+eq  = Dt(u(t,x)) + u(t,x)*Dx(u(t,x)) ~ 0 #- (0.01/pi)*Dxx(u(t,x))
 
 # Initial and boundary conditions
 bcs = [u(0,x) ~ -sin(pi*x),
@@ -35,7 +35,7 @@ prob = discretize(pdesys,discretization)
 
 # Solve ODE problem
 using OrdinaryDiffEq
-sol = solve(prob,Tsit5(),saveat=0.1)
+sol = solve(prob,Vern9(),saveat=0.1)
 
 #= # Plot results and compare with exact solution
 x = (0:dx:1)[2:end-1]
